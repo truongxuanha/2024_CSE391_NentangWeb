@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TLU</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-uppercase" aria-current="page" href="#">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">Quản lý nhân viên</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Nhap noi dung tim kiem" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Tìm</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="container-fluid">
+        <div class="container-fluid head pt-2">
+            <div class="container-fluid d-flex justify-content-between">
+                <div class="">
+                    <h2 class="text-light">QUAN LÝ NHÂN VIÊN</h2>
+                </div>
+                <div class="">
+                    <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons"></i> <span>Xóa</span></a>						
+                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Thêm nhân viên</span></a>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="selectAll">
+                            <label for="selectAll"></label>
+                        </span>
+                    </th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox1"></label>
+                        </span>
+                    </td>
+                    <td>Thomas Hardy</td>
+                    <td>thomashardy@mail.com</td>
+                    <td>89 Chiaroscuro Rd, Portland, USA</td>
+                    <td>(171) 555-2222</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </td>
+                    <td>Dominique Perrier</td>
+                    <td>dominiqueperrier@mail.com</td>
+                    <td>Obere Str. 57, Berlin, Germany</td>
+                    <td>(313) 555-5735</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox3" name="options[]" value="1">
+                            <label for="checkbox3"></label>
+                        </span>
+                    </td>
+                    <td>Maria Anders</td>
+                    <td>mariaanders@mail.com</td>
+                    <td>25, rue Lauriston, Paris, France</td>
+                    <td>(503) 555-9931</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox4" name="options[]" value="1">
+                            <label for="checkbox4"></label>
+                        </span>
+                    </td>
+                    <td>Fran Wilson</td>
+                    <td>franwilson@mail.com</td>
+                    <td>C/ Araquil, 67, Madrid, Spain</td>
+                    <td>(204) 619-5731</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+                    </td>
+                </tr>					
+                <tr>
+                    <td>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                            <label for="checkbox5"></label>
+                        </span>
+                    </td>
+                    <td>Martin Blank</td>
+                    <td>martinblank@mail.com</td>
+                    <td>Via Monte Bianco 34, Turin, Italy</td>
+                    <td>(480) 631-2097</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+                    </td>
+                </tr> 
+            </tbody>
+        </table>
+        <div class="d-flex container-fluid justify-content-between">
+            <div class="hint-text">Hiển thị <b>5 </b>/<b> 25</b> bản ghi</div>
+            <ul class="pagination">
+                <li class="page-item"><a href="#" class="page-link border-0">Trước</a></li>
+                <li class="page-item"><a href="#" class="page-link border-0">1</a></li>
+                <li class="page-item"><a href="#" class="page-link border-0">2</a></li>
+                <li class="page-item active"><a href="#" class="page-link border-0">3</a></li>
+                <li class="page-item"><a href="#" class="page-link border-0">4</a></li>
+                <li class="page-item"><a href="#" class="page-link border-0">5</a></li>
+                <li class="page-item"><a href="#" class="page-link border-0">Sau</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
