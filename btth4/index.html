@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sinh viên</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      input[type="text"],
+      input[type="date"] {
+        width: 100%;
+        padding: 8px;
+      }
+      button {
+        padding: 8px 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        margin: 0 5px;
+      }
+      .pagination button {
+        margin: 0 5px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        cursor: pointer;
+        color: black;
+      }
+      .pagination button.active {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+      }
+      .pagination button:hover:not(.active) {
+        background-color: #ddd;
+      }
+      .pagination-container {
+        width: 100%; /* Chiều rộng cố định */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quản lý sinh viên</h1>
+    <form id="formSinhVien">
+      Họ tên: <input type="text" id="hoTen" required /><br />
+      Mã SV: <input type="text" id="maSV" required /><br />
+      Ngày sinh: <input type="date" id="ngaySinh" required /><br />
+      Lớp: <input type="text" id="lop" required /><br />
+    </form>
+    <br />
+
+    <table id="bangSinhVien">
+      <thead>
+        <tr>
+          <th>Họ tên</th>
+          <th>Mã SV</th>
+          <th>Ngày sinh</th>
+          <th>Lớp</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Danh sách sinh viên sẽ được thêm vào đây -->
+      </tbody>
+    </table>
+
+    <div class="pagination-container">
+      <div class="pagination" id="pagination"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hienThi(){
+            const msg = document.getElementsByName("msg")[0];
+            const valueMsg = msg.value;
+            alert(valueMsg);
+            msg.value = "";
+        }
+    </script>
+</head>
+<body>
+    <button id="btnWelcome" type="button" name="welcome" value=" Welcome " onclick="hienThi()">Welcome</button>
+    <input id="inputWelcom" type="text" name="msg" placeholder="Nhap value"/>
+    <script src="./main.js"></script>
+</body>
+</html>
